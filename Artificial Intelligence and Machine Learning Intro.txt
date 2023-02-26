@@ -1,0 +1,84 @@
+AI: Artificial Narrow Intel :ANI = as weak AI invlovs applying AI only to specific tasks
+e.g search engine, self frivng cars.
+Artificial General Intel: AGI = strong AI, involves machines that possess the ability to perform any intellectual task that a human being can
+strong processing units, but no reasoning unit
+Artificial Super intel: term referring to the time when the capability of computers wil surpasss humans
+AI languages: Python, R, Java, Lisp, Prolog, c++, sas, etc
+
+Algo: is a set of rules and statistical techniques used to lean patterns from data
+Model: a model is traind by using ml algorithm.
+predictor variable: its is a feature(s) of the data that can be used to predict the output.
+Response var: the output var that need to be predicted using predictor var
+training data :ml model is built using the training data
+testing data: Ml model is evaluated using the testing data.
+
+
+Machine Learning Process:
+Define Objective>>>Data Gathering>>>Preparing Data>>>Data Exploration>>>Building a model>>>Model Evaluation>>>Predicitons
+for instance:
+1. Define the obj of the prob
+>>> to predict the possibility of rain by studying the weather conditions
+what are we t rying to predict, is our output gonna be binary classification var, continous var?, clustering?
+>>what are the target features? What is the input data? (te  mperature, humidity, ppct etc.)
+
+2. Data Gathering
+is the data avail, how, when, and where do we seek for data? its most time consuming aspect
+
+3. Data Preparation/cleaning
+transform data into desired format, dealing with missing values, corrupted data, remove unnecessasry data
+
+4. Data exploration: understanding the trends and patterns in the data. corr btw var are understood.
+5. Model building: a predictive model is built by using ml algo such as linear regr, deci tree etc.
+note examplesof classification algo are logistics regre, nearest neighbor, regression, naive bayesian, support vector machine, knn, etc.
+unsupervised: k-means, c-means, etc. while reinforcement learning: Q-learning, sarsa, etc.
+6. Model Evaluation & Optimization
+ML model is evaluated by using the testing data set, and the accuracy of the model is calculated, further improvement in the model are done using tech like para tuning
+7. Predictions: 
+ 
+# Packages
+#Packages are directory of python scripts, each scripts is called module. And each modules specify python funtions, methods and types. 
+#There are many packages for python available on the internet and part of these packages are packages for data science, 
+#Numpy- to efficeintly work with arrays, matplotlib for data visualization, scikit-learn for machine learning, keras for deep learning, 
+#pandas for data manipulation.To use these packages you have to install them using pip on your command line. After installation, you will need to import the package or 
+# specific functions in the package.
+Numpy is one of the libraries in python that is used to perform numerical operations for data science
+
+>>>why numpy? Lists are very powerful, they are collection of values, hold different data types, can change/remove/update elements. However, in data science you will need to perform mathematical operation over an entire collection of values and you want to do this very fast. Note Numpy array can only contain element of a single type, array of float, int or strings. It does element wise calculations. It also a python type that can come with its own methods. Also pay attention when you are joggling with different python types
+======================numpy pkg has th following func: array, arrange, + 
+>>>np.arange(0,11,2)
+array([ 0,  2,  4,  6,  8, 10])
+>>>np.zeros(3)
+array([0., 0., 0.])
+>>>np.ones((2,3)) # two dimentional array with 3 elements
+array([[0., 0., 0.],
+       [0., 0., 0.]]) 
+=======random.randint : pick any random numbers from the range and must be in the sze no.
+a1=np.random.randint(1,10,5)
+
+=====LINSPACE IS USED HERE TO PRINT OUT n EQUALLY SPACED VALUES FROM start TO end, 
+# IT CAN BE ANY NUMBER OF EQUALLY SPACED VALUES, IT TAKES IN THE THIRD ARGUMENT AS THE NUM OF POINTS NEEDED
+
+=====supervised learning: based on known target
+=====Unsupervised learning: for banks, the training data is unlabel, for clustring analysis
+=====semi-supervised:
+
+==============DATA SCIENCE ==================
+EDA: Exploratory Data Analysis i an approach to analysing data sets to summarise their main xteristics, often with visual methods.
+Feature Engineering: is the process of using domain knowledge of the data to create features to make machine learning algorithms work. FE is the fundamental to the aplication to ML and is both difficult and expensive.
+Feature Crossing: to create features from the existing ones.
+
+python may throw annoying warnings, we stop this by the ignore_warns function
+we import os for accesing files and folder easily, and os.listdir to show the content of our current directories.
+
+
+#Machine Learning
+Supervised (regresion prob and classification problems.), Unsupervised (clustering) and,  
+reinforcement learning: is a part of ml where an agent is put in an environment and he learns to 
+behave in this environment by performing certain actions and 
+observing the rewards which it gets from those actions. 
+
+diff supervised ml algo
+Linear regression is a method to predict dependent variable (y) based on valuesof independent var (x). 
+It can be used for the cases wheere we want to predict some continuous quantity.
+y = Bo + B1X + E. (its under supervised ML, but solve regression problems) Bo = intecept, 
+E=error, X=independent var, y=dependent var, B1 = slope.
