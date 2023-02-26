@@ -43,7 +43,10 @@ ML model is evaluated by using the testing data set, and the accuracy of the mod
 # specific functions in the package.
 Numpy is one of the libraries in python that is used to perform numerical operations for data science
 
->>>why numpy? Lists are very powerful, they are collection of values, hold different data types, can change/remove/update elements. However, in data science you will need to perform mathematical operation over an entire collection of values and you want to do this very fast. Note Numpy array can only contain element of a single type, array of float, int or strings. It does element wise calculations. It also a python type that can come with its own methods. Also pay attention when you are joggling with different python types
+>>>why numpy? Lists are very powerful, they are collection of values, hold different data types, can change/remove/update elements. 
+However, in data science you will need to perform mathematical operation over an entire collection of values and you want to do this very fast. 
+Note Numpy array can only contain element of a single type, array of float, int or strings. It does element wise calculations. 
+It also a python type that can come with its own methods. Also pay attention when you are joggling with different python types
 ======================numpy pkg has th following func: array, arrange, + 
 >>>np.arange(0,11,2)
 array([ 0,  2,  4,  6,  8, 10])
@@ -64,7 +67,8 @@ a1=np.random.randint(1,10,5)
 
 ==============DATA SCIENCE ==================
 EDA: Exploratory Data Analysis i an approach to analysing data sets to summarise their main xteristics, often with visual methods.
-Feature Engineering: is the process of using domain knowledge of the data to create features to make machine learning algorithms work. FE is the fundamental to the aplication to ML and is both difficult and expensive.
+Feature Engineering: is the process of using domain knowledge of the data to create features to make machine learning algorithms work. 
+FE is the fundamental to the aplication to ML and is both difficult and expensive.
 Feature Crossing: to create features from the existing ones.
 
 python may throw annoying warnings, we stop this by the ignore_warns function
