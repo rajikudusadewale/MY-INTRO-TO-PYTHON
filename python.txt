@@ -1,0 +1,565 @@
+###Python Jottings made by Raji Kudus Adewale###
+=============shift+Tab for help using Jupyter
+types of errors: syntax, runtime, 
+using 11:11:03 video tutorial:
+day1 composed of 1. getting started 2. displaying text 3. string variables 4. storing numbers 5. working with dates and time 6. making decision with code 7. complex decision with code.
+
+day2 composed of: 8. repeating events 9. repeating events until done 10. remembering list 11. how to save information file 12. reading from files 13. functions 14. handling errors
+using ARCGIS with python ()
+=============the range funs has three paprameters: start, stop and step.
+range(2, 15, 2)                      their is also count function, -----.count(var)	
+[2, 4, 6, 8, 10, 12, 14]
+==============================pow(2,4) === 2**4
+>>>PEDMAS: Parenthesis, expo, divi, multi, add, & subs
+=====using modules either maths or other
+% means modulo 5%2=1 like remainder
+programmers find all functions either by intellisense, documentation and internet searches.
+diff format to display numbers. for me i can say %d means no decimal and %f means there is decimal point.
+syntax--------------------------------output 
+print 'i have %d cats' % 6 means i have 6 cats
+print 'i have %03d cats' % 6 means   006cats
+print 'i have %f cats' % 6  means i have 6.000000 cats.
+print 'i have %.2f cats' % 6  means i have 6.00 cats
+
+methods e.g yourface.punch() yourface is where you want to perform an action, punch is the action. 
+ >>>>you can use \n to force a new line for strings and ordinary \ for numeric value
+>> append face.append(46) adds variables 
+>> count  face.count()
+>> extend  one.extend(two) adds two variables to one.
+>> index  say=['hey', 'ball', 'hello']
+say.index ('ball')   1
+print (say[0])         hey
+say[0] = 'hello'
+del say[0]
+print (say[0])
+say.insert(2, 'now')
+>> pop   say.pop(1) removes variable   similaly to remove method
+>> reverse. say.reverse
+
+
+sort and turple n find  method
+sort arrange variables in ascending order
+new=[2,1,4,6,8,9,0,3]
+new.sort()
+sorted is used for strings.
+
+strings n stuff.    %s= array
+myself=('my name is %s, i am %s years old')
+>>> varb=('Raji kudus Adewale', '19')
+>>> print myself % varb
+my name is Raji kudus Adewale, i am 2_ years old
+
+
+>> str.lower()  n str.replace('a', 'b')
+
+Dictionary= uses {}
+ the key and value 
+class={'dad':'70', 'mum':'67', 'sis':'35'}
+
+>>> dic={'dad':30,'mom':29,'lisa':10}
+>>> dic
+{'dad': 30, 'lisa': 10, 'mom': 29}
+>>> for key in dic:
+	print key, dic[key]
+dad 30
+lisa 10
+mom 29
+
+if statement. uses == 
+wale='fish'
+if wale=='fish':
+	print 'this fish is alright'
+elif wale=='cat':
+	print 'wale is up to something'
+else:
+	print 'close case'
+
+comparison operators.....
+!= means not equal to.
+'dog' <'cat'
+false
+
+ for and while loops.
+ 
+b = 1
+>>> b
+1
+>>> while b <=10:
+	print b
+	b +=1
+
+
+ gl=['bread','butter','egg','milk']
+>>> gl
+['bread', 'butter', 'egg', 'milk']
+>>> for food in gl:
+	print 'i want ' + food
+
+i want bread 
+i want butter
+i want egg
+i want milk
+
+while 1:
+	name = raw_input ('enter a name: ')
+	if name == 'quit':  break
+
+	
+enter a name: greg
+enter a name: hg
+
+how to build function? and default & multiple parameters  in a function.
+first define a function
+
+turple to dic
+	def cart(**items):
+	print items               this will go to run interface
+cart(app=5, peac=9, beef=10)
+the output will be like dic format.
+
+>>>{'app':5,'peac':9,'beef':10}
+
+challenge 1;
+name=raw_input('enter name: ')
+place=raw_input('enter where he is living: ')
+adjective=raw_input('qualify him with a word: ')
+print 'the name of vice chancellor of federal university of technology akure is ' + name.capitalize() + n\ ',he is living at ' + place.capitalize() + ', his behaviour is ' + adjective.capitalize() + '.'
+
+challene 2
+v=input ('enter final velocity: ') 
+u=input ('enter initial velocity: ')
+t=input ('enter time taken: ')
+totaldistance= (v*t-u*t)/2
+print 'the total distance covered by the car is %.2f' % totaldistance + 'meters'
+
+challenge 3
+create a loan calculator
+
+>>>#comment i wanna create a loan calculator
+print 'welcome to Loan Calculator! never worry on how to get your monthly payment calculated'
+l= input('please, kindly enter the cost of the loan you collected (loan amount): ')
+i=input('please, what is the interest rate of the loan? may be 5% or 10% ')
+n=input('yea, what is the number of years for the loan? ')
+m= float(l*(i*(1+i)*n))/float((1+i)*n-1)
+print 'using the above loan parameters, this user will be paying: %f' % m + \
+      ' per month with the interest rate of %.2f' % i
+
+
+DATE=========to solve these problems with computer we need to store and manipulate dates and times.
+now, if i want to know how many days until my birthday, first i need today's date.
+>>> the datetime class allow us to get the current date and time.
+
+==============
+import time
+>>> time.ctime()
+'Sat Jun 23 16:04:36 2018'
+==========================
+
+>>>import datetime
+currentdate=datetime.date.today()
+print currentdate
+print currentdate.year
+print currentdate.month
+
+>>>>>>> to display date in diff format : we use ((((strftime))))     ('%d %b,%y')
+N.B b is used for month cos m cant be use for min and month    
+check strftime.org for more dont memorize them.
+>>> %a is the day of the week abbr
+>>> %A is the name of the week
+>>> %b is the month abbr
+>>> %B is th full month name
+.>>> %y is two digit year
+>>> %Y is the full
+>>> %w weekday of the week
+>>> %W week number of the year
+>>> %j days of the year
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+import datetime
+import time
+currentdate = datetime.date.today()
+currentTime = datetime.datetime.now()
+print str(currenttime) + str(datetime.datetime.strftime(currentTime, ' %I:%M %p'))
+print 'current date and time is: ' , datetime.datetime.now()
+print 'current year' , currentdate.strftime('%Y')
+print 'month of the year' , currentdate.strftime('%B')
+print 'month of the year' , currentdate.strftime('%b')
+print 'week number of the year: ' , currentdate.strftime('%W')
+print 'weekday of the week' , currentdate.strftime('%w')
+print "day of the week: " , currentdate.strftime('%A')
+print 'days of the year: ' , currentdate.strftime('%j')
+
+
+challenge 4
+ write a wedding invitation program  ('please attend our event Sunday, July 20 in the year 1997')
+
+>>>import datetime
+print 'welcome to wedding invitation editor! \n input all the necessary requirements'
+userinput=raw_input('enter the date of the ceremony below in ths format (mm/dd/YYYY) ')
+wedding = datetime.datetime.strptime(userinput, '%m/%d/%Y').date()
+print str('Olukunle & Olaide majestically invites you to their wedding. Please, attend our event on ')\
+      + str(wedding.strftime('%A, %B %d, in the year %Y'))
+print 'Thank you. One Family'
+
+output:
+welcome to wedding invitation editor! 
+ input all the necessary requirements
+enter the date of the ceremony below in ths format (mm/dd/YYYY) 9/16/2018
+Olukunle & Olaide majestically invites you to their wedding. Please, attend our event on Sunday, September 16, in the year 2018
+Thank you. One Family
+>>> 
+
+challenge 5:
+
+now, calculating days until my birthday. I need to input my brthday. birthday is a string, we need to convert it to date format using ((((strptime)))) goes thus:
+
+>>>import datetime
+currentdate = datetime.date.today()
+print str("today's date is ") + str(currentdate)
+userinput=raw_input('please, kindly enter your birthday(mm/dd/yyyy) lets calculate days to your birthday: ')
+birthday = datetime.datetime.strptime(userinput, '%m/%d/%Y').date()
+print str('your coming birthday is on ')+ str(birthday.strftime('%a, %b %d, %Y'))
+Days_remain = birthday-currentdate
+print str('Days left to your birthday is ')+ str(Days_remain.days)
+if str(Days_remain) < (30):
+    print 'happy birthday in Advance customer, bye.'
+elif str(Days_remain) >(30):
+    print 'your birthday is still far. epele sir'
+else:
+    print ''
+
+output is
+
+today's date is 2018-06-08
+please, kindly enter your birthday(mm/dd/yyyy) lets calculate days to your birthday: 9/16/2018
+your coming birthday is on Sun, Sep 16, 2018
+Days left to your birthday is 100
+your birthday is still far. epele sir
+>>> 
+from datetime import datetime
+userinput=datetime.strptime('Jul 1 2014 2:43PM', '%b %d %Y %I:%M%p')
+>>> print userinput
+2014-07-01 14:43:00
+=============lets talk about times, similar to date:
+import datetime
+currenttime=datetime.datetime.now()
+print currenttime       note.   same with minute, seconds & hour
+
+%H Hours (24 hr clock)
+%i Hours (12 hr clock)
+&p AM or PM 
+%m  Minutes
+%S Seconds
+
+>>>import datetime
+currentTime=datetime.datetime.now()
+print str('time says ') + str(datetime.datetime.strftime(currentTime, '%I:%M %p'))
+
+output will be
+time says 09:22 PM
+
+
+challenge 6:
+ask a user to enter the deadline for their project & tell them how many days they have to complete the project.
+
+
+>>>import datetime
+currentdate=datetime.date.today()
+print currentdate
+userinput=raw_input('user kindly enter deadline date of your project in this format mm/dd/yyyy: ')
+projectdate = datetime.datetime.strptime(userinput, '%m/%d/%Y').date()
+deadline=projectdate-currentdate
+print str('you have only ') + str(deadline.days) + str(' days to complete your project, so do it quick ')  + str(' which is on ')+ str(projectdate.strftime('%A , %W')) + str(' weeks of the year')
+if str(deadline) < str(10):
+    print 'hi user, you still have about 10 days ahead'
+else:
+    print 'hi user, you have less than 10 days to complete your work according to the deadline'
+
+output :
+2018-06-09
+user kindly enter deadline date of your project in this format mm/dd/yyyy: 6/16/2018
+you have only 7 days to complete your project, so do it quick  which is on Saturday , 24 weeks of the year
+hi user, you have less than 10 days to complete your work according to the deadline
+
+
+if statement:
+for example
+>>>> team=raw_input("what is your favorite hockey team? ")
+if team.lower()== "senators": ===this will make it to be non case sensitive.  but when reading from a file. you =cnvert both to the same case.
+
+deposit=int(input('enter an amount: '))====if u wanna run dis kind code dealing with number, first convert to int or float
+if deposit >= 100:
+
+    print 'yes, its greater than 100 '
+
+
+
+=======challenge 7:
+calculate shipping charges or a shopper.
+
+>>>print 'Good day customer, let calculate your shipping charges! '
+shopperinput=float(input('enter the amount of your total puchase...: '))
+amount=10
+if str(shopperinput) < 50:
+    print 'your shipping is free, Have a nice day. '
+elif shopperinput > 50:
+    print str('your shipping amount is ') + str(shopperinput+amount)+'$'
+else:
+    print ''
+
+>>> output:
+Good day customer, let calculate your shipping charges! 
+enter the amount of your total puchase...: 1000
+your shipping amount is 1010.0$
+    
+
+when dealing with and/or parentheses or statement
+
+challenge 8:
+calculate the total to charge for an order from an online store in Canada. ask the user what country they are from and their order total, if the user is from canada , ask which pronince, otherwise do not charge c=any taxes
+
+>>>>>>>>>>>
+print 'Canada online store charge calculator! '
+order = float(raw_input('what is the total amount of your order? '))
+location = str(raw_input('what is your country? ').upper())
+if location == 'CANADA':
+    province = raw_input('what is your province? ').upper()
+    if province == 'ALBERTA':
+        print 'total charge is: ' + str(order*0.05)+str('$')
+    if province == 'ONTARIO':
+        print 'total charge is: ' + str(order*0.13)+str('$')
+    if province ==  'OTHERS':
+        print 'total charge is: ' + str(order*0.05)+str('$')
+        
+else:
+    print 'hello, no tax charges for ' + location
+print 'Thanks for patronizing us, bye!!!'
+
+output>>>>>>>
+Canada online store charge calculator! 
+what is the total amount of your order? 210
+what is your country? canada
+what is your province? alberta
+total charge is: 10.5$
+Thanks for patronizing us, bye!!!
+
+    
+				DAY 2
+****repeating events: we use loop when we get somethinh that has to be done over and over======TURTLE. we import turtle which is alibrary that lets you draw
+>>> to draw a square
+
+>>>>import turtle
+turtle.forward(100)
+turtle.left(90)
+turtle.color('red')
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+turtle.left(90)
+turtle.forward(100)
+
+USING for LOOP for turtle using loop to draw shapes 
+==================range here mean, number of times you want the code to be executed. i can use any variable as step.
+import turtle
+for steps in range(4):
+	turtle.right(90)
+	turtle.forward(100) 
+	for moretimes in range(4):
+		turtle.right(90)
+		turtle.forward(50)       this means that there are four squares inside the big square.
+
+=============to draw different shapes and to determine the angle, for triangle =360/3  and the range will be 3, for pentagon = 360/5 and the range will be 5
+
+using range in looping: 
+for steps in range(1,10,2) :            is the same thing as range(1,10,2) 
+	print steps      
+
+===========for color looping in turtle
+import turtle
+for colour in ['red', 'black', 'blue', 'green'] :
+	turtle.color(colour)
+	turtle.forward(100)
+	turtle.right(90)
+
+=========challenge 9:
+ get turtle to draw an octagon(8):
+>>>import turtle
+sides=input('what is the side number of octagon? ')
+for steps in range(sides) :
+    turtle.right(360/sides)
+    turtle.forward(30)
+
+-------to draw another hape beside i, just type:
+>>>turlte.forward(distance that you want)
+
+===========while loop means do something until a condition is true
+>>>answer = '0'
+while answer != '4':					this is the real value
+    answer = raw_input('two plus two equals to ')   
+print ('yes! 2 + 2 = 4 ')
+
+>>>import turtle
+counter = 0
+while counter < 4:
+	turtle.forward(100)
+	turtle.right(90)
+	counter +=1                             which mean counter = counter + 1 
+
+=========challenge 10: create an etch a sketch program, have the user enter a pen color, a line lenght and an angle, use turtle to draw a line based on their specifications, when the user specifies a line  length of 0 stop drawing.
+
+>>>import turtle
+colour=str(raw_input('what is the pen color? ')).upper()
+lenght=int(raw_input('what is the line lenght? '))
+sides=int(raw_input('what is the side no? '))
+if lenght > int(0) : 
+    for steps in range(sides) :
+        turtle.color(colour)
+        turtle.forward(lenght)
+        turtle.right(360/sides)
+elif lenght == int(0) :
+    print ''
+    
+
+==========================================
+guest = ['red', 'blue', 'yellow', 'indoio']
+for currentguest in guest :
+    print (currentguest)
+  				is the same as
+===========
+guest = ['red', 'blue', 'yellow']
+listlength = len(guest)
+for steps in range(listlength) :
+    print (guest[steps])
+
+    
+=================================================================
+how to save to information in files. (open, write and close)
+how to write to a file with code? 
+=====open function: myfile = open(fileName, accessMode).
+we use open function to create and open a file
+there is need of fileName and accessmode. 
+========fileName is the name of your file including the extension e.g data.txt, mytimes.csv(this is an excel format)
+========accessmode specifies what you will do with the file after you open it.
+accessmode &action: r = read the file, w = write to the file(overwrite the file), a = append to the existing file content, b = open a binary file, w+ = read/write
+ 
+===============================
+csv file(character seperated values) contains data seperated by a character(usually comma)
+fileName = 'open.csv'
+accessMode = 'w'
+myfile = open(fileName, accessMode)
+myfile.write('this is the first line, 21 \n')
+myfile.write('this is the second line, 24')
+myfile.close()
+print 'file written successfully'
+
+the code above will run into excel
+===========================================
+fileName = 'open.txt'
+accessMode = 'w'
+userinput=str(raw_input('enter the file name: '))
+myfile = open(fileName, accessMode)
+myfile.write(userinput)
+myfile.close()
+print 'file written successfully'
+
+this code allow user to input variables in text format 
+==============================
+how to read information that was saved in files, just like to resume from where someone stops one activity 
+============you gat open b4 you can read a file.
+below code is to read a txt file
+>>>file = open('name of the file', 'accessmode which is 'r'')
+allfiles = file.read() 	means u call on the whole file		OR 
+allfiles= file.readline()	which show only the first line
+print(allfiles)
+=======================================
+to read a csv file, there is csv library which will help you. we must import csv, then use the reader function to return all the rows from the file into a list e.g (datafromfile= csv.reader(mycsvfile). if your file isnot usinng comma as a delimiter, u can tell the reader function what cahracter is used as a delimiter. e.g datafromfile= csv.reader(mycsvfile, delimiter=',')
+>>> filename = 'guestlist'
+>>>acceeMode = 'r'
+>>>with open(fileName, accessMode) as myCSVFile:   ----------> means programs should always open a file, and close it when thye are done.
+>>>	datafromfile = csv.reader(myCSVFile)
+
+
+==========import csv
+with open('open.txt', 'r') as myCSVFile:
+    myfile = csv.reader(myCSVFile)
+    for currentRow in myfile:
+        print (';'.join(currentRow))
+        for currentWord in currentRow:
+            print(currentWord)
+
+===============================FUNCTION avoid rpetition ==========================
+what is a function? (Noun) A reusable section of code with a name that does something, sometimes called a method. why create function? code reuse, simplify your codee, easier tomake changes. inside a function, parameters behave like variables & it's a good idea to give them meaningful names.
+=============================================
+>>> def map(x)
+	return 'whats your name? ' + x 
+print map('my name is Dewale')
+
+whats your name? my name is Dewale.
+
+def map(x)
+	return x + 10         ------> means exist
+print map(32)
+42
+======================================
+def Bad():
+	print('i am not bad')
+	return
+Bad()
+
+output>>> i am not bad
+   
+to call function from a  function
+>>> def main():
+	Bad()
+	return
+>>> def Bad():
+	print'i am not a bad boy'
+	return
+main()
+
+===============================
+def displayMessage(greeting, name):
+    message = greeting + ',' + name
+    print message
+    return
+displayMessage('Hi','Tolu')
+=================================
+>>>sum, max, min, round are examples of functions
+>>>count, replace, capitalize are examples of methods
+####USER DEFINED FUNCTION
+def square(x):
+	return(x**2)---------------------->square(2)
+>>>4
+def cuberoot(x):
+	return((x**4)/3)--------------->cuberoot(9)
+===========================================================
+ Packages are directory of python scripts, each scripts is called module. And each modules specify python funtions, methods and types. There are many packages for python available on the internet and part of these packages are packages for data science, Numpy- to efficeintly work with arrays, matplotlib for data visualization, scikit-learn for machine learning, keras for deep learning, pandas for data manipulation.
+To use these packages you have to install them using pip on your command line. After installation, you will need to import the package or specific functions in the package.
+Numpy is one of the libraries in python that is used to perform numerical operations for data science
+
+>>>why numpy? Lists are very powerful, they are collection of values, hold different data types, can change/remove/update elements. However, in data science you will need to perform mathematical operation over an entire collection of values and you want to do this very fast. Note Numpy array can only contain element of a single type, array of float, int or strings. It does element wise calculations. It also a python type that can come with its own methods. Also pay attention when you are joggling with different python types
+======================numpy pkg has th following func: array, arrange, + 
+>>>np.arange(0,11,2)
+array([ 0,  2,  4,  6,  8, 10])
+>>>np.zeros(3)
+array([0., 0., 0.])
+>>>np.ones((2,3)) # two dimentional array with 3 elements
+array([[0., 0., 0.],
+       [0., 0., 0.]]) 
+=======random.randint : pick any random numbers from the range and must be in the sze no.
+a1=np.random.randint(1,10,5)
+================================LINSPACE IS USED HERE TO PRINT OUT n EQUALLY SPACED VALUES FROM start TO end, IT CAN BE ANY NUMBER OF EQUALLY SPACED VALUES, IT TAKES IN THE THIRD ARGUMENT AS THE NUM OF POINTS NEEDED
+
+==============supervised learning: based on known target
+==============Unsupervised learning: for banks, the training data is unlabel, for clustring analysis
+===========semi-supervised:
+
+
+_+=============================DATA SCIENCE ==================
+EDA: Exploratory Data Analysis i an approach to analysing data sets to summarise their main xteristics, often with visual methods.
+Feature Engineering: is the process of using domain knowledge of the data to create features to make machine learning algorithms work. FE is the fundamental to the aplication to ML and is both difficult and expensive.
+Feature Crossing: to create features from the existing ones.
+
+python may throw annoying warnings, we stop this by the ignore_warns function
+we import os for accesing files and folder easily, and os.listdir to show the content of our current directories.
