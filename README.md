@@ -1,7 +1,7 @@
-# MY-INTRO-TO-PYTHON 
-## Compilation of Python Programming Codes
+# INTRO-TO-PYTHON 
+## Compilation of Python Programming Codes for beginners and intermediate
 ### This text file contains introduction to Python Programming language. Both Explanations, scripts, and challenges are compiled in text document.
-### This was self compiled in 2019 and updated in 2023.
+
 **These topics were discussed with examples:**
 1. Displaying text string variables
 2. Storing numbers 
